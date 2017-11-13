@@ -3,8 +3,8 @@ import random as R
 R.seed()
 
 def alg(a, b, p):
-	"""Returns True if a random integer if the probability of a check on a and b
-	is greater than a given parameter, p"""
+	"""Returns True the probability of a check on a and b is
+	greater than a given parameter, p. False otherwise."""
 	if check(a, b) > p:
 		return True
 	else:
