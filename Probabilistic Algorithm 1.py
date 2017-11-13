@@ -3,6 +3,8 @@ import random as R
 R.seed()
 
 def alg(a, b, p):
+	"""Returns True if a random integer if the probability of a check on a and b
+	is greater than a given parameter, p"""
 	if check(a, b) > p:
 		return True
 	else:
@@ -15,14 +17,13 @@ def check(a, b):
 	return R.randint(a, b)/b
 
 def test_alg(a=1, b=20, p=.7, trials=100):
-	l = []
-	t = 0
+	results = []
+	trues = 0
 	for _ in range(trials):
 		l.append(alg(a, b, p))
 	for b in l:
 		if b:
 			t += 1
-	print("true: ", t, "false: ", (len(l) - t))
-	return l
-
+	print("true: ", trues, "false: ", (len(l) - trues))
+	return results
 
