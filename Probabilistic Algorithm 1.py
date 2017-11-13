@@ -2,7 +2,7 @@ import random as R
 
 R.seed()
 
-def alg(a, b, p=0.7):
+def alg(a, b, p):
 	if check(a, b) > p:
 		return True
 	else:
@@ -22,7 +22,7 @@ def test_alg(a=1, b=20, p=.7, trials=100):
 	for b in l:
 		if b:
 			t += 1
-	print("true: " + str(t), "false: " + str(len(l) - t))
+	print("true: ", t, "false: ", (len(l) - t))
 	return l
 
 
